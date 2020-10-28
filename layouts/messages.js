@@ -211,7 +211,8 @@ exports.minecraft = async (data) => {
 	const version = async () => {
 		if (
 			data["version"] !== "● Offline" ||
-			data["version" !== "◌ Loading..."]
+			data["version"] !== "◌ Loading..." ||
+			data["version"] !== "◒ Waiting in queue"
 		) {
 			return `<b>Version: ${data["version"]}</b>` + `\n`;
 		} else {
