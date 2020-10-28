@@ -1,20 +1,20 @@
 {
   "links": [
     {
-      "name": "My Channel",
-      "url": "genemators"
+      "name": "Community Group",
+      "url": "bsba_group"
     },
     {
-      "name": "Notifications",
-      "url": "genestatic"
+      "name": "Media Channel",
+      "url": "bsba_media"
     },
     {
       "name": "Main Bot",
-      "url": "genemator_bot"
+      "url": "bsba_bot"
     },
     {
       "name": "Testing Phase Bot",
-      "url": "beta_genemator_bot"
+      "url": "test_bsba_bot"
     },
     {
       "name": "Chisel Devs",

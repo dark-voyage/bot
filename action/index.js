@@ -1,5 +1,8 @@
-require("./admin");
-require("./inline");
-require("./actions");
-require("./middlewares");
-require("./exclude");
+require('./admin')
+// require('./types')
+require('./inline')
+require('./actions')
+require('./middlewares')
+// require('./channels')
+require('./exclude')
+

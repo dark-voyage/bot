@@ -1,5 +1,5 @@
-require("./help");
-require("./join");
-require("./admin");
-require("./check");
-require("./stats");
+require('./help')
+require('./join')
+require('./admin')
+require('./check')
+require('./minecraft')
