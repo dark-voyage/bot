@@ -5,7 +5,7 @@ exports.start = Markup.inlineKeyboard([
 ]);
 
 exports.help = Markup.inlineKeyboard([
-	[Markup.switchToCurrentChatButton("Inline Mode (Beta)", "")],
+	[Markup.switchToCurrentChatButton("Search Projects", "")],
 ]);
 
 exports.admin_view = (data) =>
@@ -35,7 +35,7 @@ exports.form_accept = Markup.inlineKeyboard([
 ]);
 
 exports.form_decline = Markup.inlineKeyboard([
-	[Markup.urlButton(`Feedback Zone`, `https://t.me/genestatic`)],
+	[Markup.urlButton(`Feedback Zone`, `https://t.me/genemator_bot`)],
 ]);
 
 exports.form_complete = Markup.inlineKeyboard([
@@ -43,13 +43,13 @@ exports.form_complete = Markup.inlineKeyboard([
 	[
 		Markup.urlButton(
 			`Check pending invitations`,
-			`https://github.com/orgs/genestatic/people/pending_invitations`
+			`https://github.com/orgs/chiseldevs/people/pending_invitations`
 		),
 	],
 	[
 		Markup.urlButton(
 			`Check pending collaborators`,
-			`https://github.com/orgs/genestatic/pending_collaborators`
+			`https://github.com/orgs/chiseldevs/pending_collaborators`
 		),
 	],
 ]);
@@ -58,13 +58,13 @@ exports.form_request = Markup.inlineKeyboard([
 	[
 		Markup.urlButton(
 			`Check pending invitations`,
-			`https://github.com/orgs/genestatic/people/pending_invitations`
+			`https://github.com/orgs/chiseldevs/people/pending_invitations`
 		),
 	],
 	[
 		Markup.urlButton(
 			`Check pending collaborators`,
-			`https://github.com/orgs/genestatic/pending_collaborators`
+			`https://github.com/orgs/chiseldevs/pending_collaborators`
 		),
 	],
 ]);
@@ -78,13 +78,13 @@ exports.form_admin = (data) =>
 		[
 			Markup.urlButton(
 				`Check pending invitations`,
-				`https://github.com/orgs/genestatic/people/pending_invitations`
+				`https://github.com/orgs/chiseldevs/people/pending_invitations`
 			),
 		],
 		[
 			Markup.urlButton(
 				`Check pending collaborators`,
-				`https://github.com/orgs/genestatic/pending_collaborators`
+				`https://github.com/orgs/chiseldevs/pending_collaborators`
 			),
 		],
 	]);
