@@ -6,15 +6,15 @@ const message = require("../../layouts/messages");
 const keyboard = require("../../layouts/keyboards");
 const database = require("../../database/db");
 
-composer.command(`admins`, async (ctx) => {
-	const admins = Object.keys(database.admins);
+composer.command(`students`, async (ctx) => {
+	const students = Object.keys(database.students);
 
 	await ctx.replyWithAnimation(
-		{ url: gifs.admin },
+		{ url: gifs.student },
 		{
 			parse_mode: "HTML",
-			caption: message.admin_menu,
-			reply_markup: await keyboard.admin_list(admins),
+			caption: message.student_menu,
+			reply_markup: await keyboard.student_list(students),
 		}
 	);
 });

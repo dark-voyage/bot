@@ -2,7 +2,7 @@ require("./help");
 require("./join");
 require("./start");
 require("./check");
-require("./admin");
+require("./student");
 require("./stats");
 require("./links");
 require("./stream");

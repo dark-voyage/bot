@@ -32,7 +32,7 @@ exports.help =
 	`\n` +
 	`/stats - <code>check admin stats of user</code>` +
 	`\n` +
-	`/admins - <code>get infos about admins</code>` +
+	`/students - <code>get infos about genemator's students</code>` +
 	`\n` +
 	`/links - <code>show genemator's url links</code>` +
 	`\n` +
@@ -59,9 +59,9 @@ exports.help =
 	`<i>In order to use our inline mode, switch to inline mode ` +
 	`by typing: @genemator_bot and then start typing something there.</i>`;
 
-exports.admin_menu = `<b>Choose an admin from the list to get information about:</b>`;
+exports.student_menu = `<b>Choose a student from the list to get information about:</b>`;
 
-exports.admin_view = (data, match) =>
+exports.student_view = (data, match) =>
 	`<a href="${data["avatar"]}"></a><a href="${data["profile"]}"><b>${match}</b></a>` +
 	`\n` +
 	`<b>Name:</b> <code>${data["name"]}</code>` +

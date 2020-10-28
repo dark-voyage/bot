@@ -1,5 +1,5 @@
 require("./help");
 require("./join");
-require("./admin");
+require("./student");
 require("./check");
 require("./minecraft");

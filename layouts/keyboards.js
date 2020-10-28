@@ -1,4 +1,4 @@
-const { Markup } = require("telegraf");
+const { Markup, Extra } = require("telegraf");
 
 exports.start = Markup.inlineKeyboard([
 	[Markup.callbackButton("Show detailed information", "help")],
@@ -8,20 +8,20 @@ exports.help = Markup.inlineKeyboard([
 	[Markup.switchToCurrentChatButton("Search Projects", "")],
 ]);
 
-exports.admin_view = (data) =>
+exports.student_view = (data) =>
 	Markup.inlineKeyboard([
 		[Markup.urlButton(`Website`, data["profile"])],
 		[
 			Markup.urlButton(`Github`, `https://github.com/${data["github"]}`),
 			Markup.urlButton(`Telegram`, `https://t.me/${data["telegram"]}`),
 		],
-		[Markup.callbackButton(`⬅ Back`, `admins`)],
+		[Markup.callbackButton(`⬅ Back`, `students`)],
 	]);
 
-exports.admin_list = async (data) => {
+exports.student_list = async (data) => {
 	const list = [];
-	for (let admin of data) {
-		list.push([Markup.callbackButton(admin, `admin_${admin}`)]);
+	for (let student of data) {
+		list.push([Markup.callbackButton(student, `student_${student}`)]);
 	}
 	return Markup.inlineKeyboard(list);
 };
