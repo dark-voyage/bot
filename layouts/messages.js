@@ -191,15 +191,50 @@ exports.inline = (data) =>
 	`<code>🔃: ${data["forks_count"]}</code> <b>|</b> ` +
 	`<code>❗: ${data["open_issues_count"]}</code>`;
 
-exports.minecraft = (data) =>
-	`<b>The status of our minecraft server:</b>` + `\n` +
-	`\n` +
-	`<b>Address:</b> mc.genemator.me` + `\n` +
-	`<b>Online:</b> ${data.online}` + `\n` +
-	`<b>Message:</b> ${data["motd"]["clean"][0]}` + `\n` +
-	`<b>Players: (${data["players"].online}/${data["players"].max})</b>` + `\n` +
-	`<b>Version: ${data.version}</b>` + `\n` +
-	`<b>Software:</b> ${data["software"]}` + `\n`
+exports.minecraft = async (data) => {
+	const online = async () => {
+		if (data["online"]) {
+			return "responding";
+		} else {
+			return "not responding";
+		}
+	};
+	const software = async () => {
+		if (data["software"]) {
+			return `<b>Software:</b> ${data["software"]}` + `\n`;
+		} else {
+			return ("");
+		}
+	};
+	const version = async () => {
+		if (data["version"] !== "● Offline" || data["version" !== "◌ Loading..."]) {
+			return `<b>Version: ${data["version"]}</b>` + `\n`;
+		} else {
+			return ("");
+		}
+	};
+	const players = async () => {
+		if (data["players"]["online"] !== 0) {
+			return `<b>Players:</b> <code>${data["players"]["list"].toString()}</code> <i>(${data["players"].online}/${data["players"].max})</i>` + `\n`
+		} else {
+			return `<b>Players:</b> no active players currently` + `\n`
+		}
+	}
+	return (
+		`<b>The status of our minecraft server:</b>` +
+		`\n` +
+		`\n` +
+		`<b>Address:</b> mc.genemator.me` +
+		`\n` +
+		`<b>Server:</b> ${await online()}` +
+		`\n` +
+		`<b>Message:</b> ${data["motd"]["clean"][0]}` +
+		`\n` +
+		`${await players()}` +
+		`${await version()}` +
+		`${await software()}`
+	);
+};
 
 exports.error_admin = `<b>You don't have enough power to do that!</b>`;
 

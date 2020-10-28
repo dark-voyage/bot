@@ -151,10 +151,6 @@ exports.stream = Markup.inlineKeyboard([
 ]);
 
 exports.minecraft = Markup.inlineKeyboard([
-	[
-		Markup.callbackButton("🔃 Refresh", "minecraft")
-	],
-	[
-		Markup.urlButton("🌐 Website", "https://genemator.aternos.me/")
-	]
-])
+	[Markup.callbackButton("🔃 Refresh", "minecraft")],
+	[Markup.urlButton("🌐 Website", "https://genemator.aternos.me/")],
+]);

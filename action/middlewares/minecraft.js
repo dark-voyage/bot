@@ -1,6 +1,6 @@
 const { composer, middleware } = require("../../core/bot");
 
-const gifs = require("../../database/db").gifs
+const gifs = require("../../database/db").gifs;
 const consoles = require("../../layouts/consoles");
 const message = require("../../layouts/messages");
 const keyboard = require("../../layouts/keyboards");
@@ -36,16 +36,10 @@ composer.command(`minecraft`, async (ctx) => {
 			{
 				reply_markup: keyboard.minecraft,
 				parse_mode: "HTML",
-				caption: message.minecraft(database),
+				caption: await message.minecraft(database),
 			}
 		);
 	}
-});
-
-composer.command(`auth`, async (ctx) => {
-	await ctx.replyWithHTML(message.minecraft_account, {
-		reply_markup: keyboard.minecraft_account,
-	});
 });
 
 middleware(composer);

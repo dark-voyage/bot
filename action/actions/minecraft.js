@@ -21,7 +21,8 @@ composer.action(`minecraft`, async (ctx) => {
 		);
 	} else {
 		await ctx.editMessageCaption(
-			message.minecraft(database) + `\n<b>Last Update:</b> ${uptime}`,
+			(await message.minecraft(database)) +
+				`\n<b>Last Update:</b> ${uptime}`,
 			{
 				parse_mode: "HTML",
 				reply_markup: keyboard.minecraft,
