@@ -7,17 +7,17 @@ exports.start =
 	`With the help of this bot you can do:` +
 	`\n` +
 	`\n` +
-	`<code>* Check current status of the team</code>` +
+	`<code>* Check current status of the Genemator</code>` +
 	`\n` +
-	`<code>* Check the members & their statuses</code>` +
+	`<code>* Check the students & their statuses</code>` +
 	`\n` +
-	`<code>* Check status of minecraft servers</code>` +
+	`<code>* Check status of minecraft server</code>` +
 	`\n` +
 	`<code>* Check statuses of github repositories</code>` +
 	`\n` +
 	`<code>* Leave a feedback to admins</code>` +
 	`\n` +
-	`<code>* Request to join our github organisation</code>` +
+	`<code>* Request to join github organisation</code>` +
 	`\n` +
 	`\n` +
 	`<i>In order to see full detailed usage information of the bot, press the button below.</i>`;
@@ -39,6 +39,8 @@ exports.help =
 	`/stream - <code>show media creator's stream links</code>` +
 	`\n` +
 	`/join - <code>request to join our organisation</code>` +
+	`\n` +
+	`/minecraft - <code>minecraft server status ping</code>` +
 	`\n` +
 	`/feedback - <code>leave a feedback to admins</code>` +
 	`\n` +
