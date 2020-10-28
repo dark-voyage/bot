@@ -1,7 +1,7 @@
 const { composer, middleware } = require("../../core/bot");
 const { Markup } = require("telegraf");
 const axios = require("axios");
-const env = require("../../../apps/config/env.config");
+const env = require("../../core/env");
 
 const consoles = require("../../layouts/consoles");
 const database = require("../../database/db");

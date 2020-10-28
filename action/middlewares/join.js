@@ -3,7 +3,7 @@ const { composer, middleware } = require("../../core/bot");
 const consoles = require("../../layouts/consoles");
 const message = require("../../layouts/messages");
 const keyboard = require("../../layouts/keyboards");
-const env = require("../../../apps/config/env.config");
+const env = require("../../core/env");
 
 composer.hears(/\/join (.+)/gi, async (ctx) => {
   const memberTg = ctx.from.id;
