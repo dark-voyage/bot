@@ -1,2 +1,2 @@
-require('./env')
-require('./bot')
+require("./env");
+require("./bot");

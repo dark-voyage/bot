@@ -1,27 +1,66 @@
-const { composer, middleware } = require('../../core/bot')
+const { composer, middleware } = require("../../core/bot");
 
-const consoles = require('../../layouts/consoles')
-const security = require('../security')
-const database = require('../../database/db')
+const axios = require("axios");
 
-composer.command(`list`, async ctx => {
-    await security(ctx, async () => {
-        const list = database.users["temporary"].toString()
+const consoles = require("../../layouts/consoles");
+const security = require("../security");
+const database = require("../../database/db");
 
-        if (list === '') {
-            await ctx.replyWithAnimation({url: `https://media.giphy.com/media/3o6UB117P7KdPnnpNC/source.gif`}, {
-                parse_mode: "HTML",
-                caption: `<b>Temporary admin list is empty!</b>`
-            })
+composer.command(`list`, async (ctx) => {
+  const subscribers = async () => {
+    return await axios
+      .get(`https://api.genemator.me/subscriber`)
+      .then((res) => {
+        return res.data.join(`\n`);
+      });
+  };
+  const subscribersCount = async () => {
+    return await axios
+      .get(`https://api.genemator.me/subscriber`)
+      .then((res) => {
+        return res.data.length;
+      });
+  };
+  await security(ctx, async () => {
+    const list = database.users["temporary"].join("\n");
+
+    if (!list) {
+      await ctx.replyWithAnimation(
+        { url: `https://media.giphy.com/media/3o6UB117P7KdPnnpNC/source.gif` },
+        {
+          parse_mode: "HTML",
+          caption:
+            `<b>Temporary admin list is empty!</b>` +
+            `\n` +
+            `\n` +
+            `<b>Users: </b>` +
+            `\n` +
+            `<pre>${await subscribers()}</pre>` +
+            `\n` +
+            `\n` +
+            `<b>Total users count:</b> ${await subscribersCount()}`,
         }
-        else {
-            await ctx.replyWithAnimation({url: `https://media.giphy.com/media/3o6UB117P7KdPnnpNC/source.gif`}, {
-                parse_mode: "HTML",
-                caption: `<b>Temporary admins:</b>\n<code>${list}</code>`
-            })
+      );
+    } else {
+      await ctx.replyWithAnimation(
+        { url: `https://media.giphy.com/media/3o6UB117P7KdPnnpNC/source.gif` },
+        {
+          parse_mode: "HTML",
+          caption:
+            `<b>Temporary admins:</b>\n<code>${list}</code>` +
+            `\n` +
+            `\n` +
+            `<b>Users: </b>` +
+            `\n` +
+            `<pre>${await subscribers()}</pre>` +
+            `\n` +
+            `\n` +
+            `<b>Total users count:</b> ${await subscribersCount()}`,
         }
-    })
-})
+      );
+    }
+  });
+});
 
-middleware(composer)
-consoles.module(__filename)
+middleware(composer);
+consoles.module(__filename);

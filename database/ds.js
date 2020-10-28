@@ -1,11 +1,12 @@
-const axios = require('axios')
+const axios = require("axios");
 
 module.exports = (link) => {
-    return axios.get(link)
-        .then(response => {
-        return response.data
+  return axios
+    .get(link)
+    .then((response) => {
+      return response.data;
     })
-        .catch(errors => {
-        return null
-    })
-}
+    .catch((errors) => {
+      return null;
+    });
+};
