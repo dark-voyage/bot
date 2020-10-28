@@ -25,7 +25,7 @@ if (env.ENVIRONMENT === "heroku") {
 			consoles.launch(env.ENVIRONMENT);
 			await bot.telegram.sendMessage(
 				env.CONTROLLER,
-				`<a href="https://github.com/4bis1/senpai"><b>⛓ GitHub Update Notification ⛓</b></a>` +
+				`<a href="https://github.com/genemators/bot"><b>⛓ GitHub Update Notification ⛓</b></a>` +
 					`\n` +
 					`\n` +
 					`<i>The telegram bot has just finished checking health status and has been restarted successfully</i>` +
@@ -33,7 +33,7 @@ if (env.ENVIRONMENT === "heroku") {
 					`\n` +
 					`<b>For more information, visit:</b>` +
 					`\n` +
-					`<a href="https://t.me/senpai_chanbot"><u>https://t.me/senpai_chanbot</u></a>`,
+					`<a href="https://t.me/genemator_bot"><u>https://t.me/genemator_bot</u></a>`,
 				{
 					parse_mode: "HTML",
 					disable_notification: true,
