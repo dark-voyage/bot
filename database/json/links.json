@@ -1,24 +1,36 @@
 {
 	"links": [
 		{
-			"name": "My Channel",
-			"url": "genemators"
+			"name": "Facebook",
+			"url": "https://facebook.com/sakhib.orzklv"
 		},
 		{
-			"name": "Notifications",
+			"name": "Instagram",
 			"url": "genestatic"
 		},
 		{
-			"name": "Main Bot",
+			"name": "Twitter",
 			"url": "genemator_bot"
 		},
 		{
-			"name": "Testing Phase Bot",
+			"name": "Twitch",
 			"url": "beta_genemator_bot"
 		},
 		{
-			"name": "Chisel Devs",
+			"name": "VKontakte",
 			"url": "iblogs_community"
+		},
+		{
+			"name": "Telegram",
+			"url": "https://t.me/genemators"
+		},
+		{
+			"name": "GitHub",
+			"url": "https://github.com/genemators"
+		},
+		{
+			"name": "Steam",
+			"url": "https://steamcommunity.com/id/genemator"
 		}
 	]
 }

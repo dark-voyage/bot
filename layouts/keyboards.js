@@ -134,18 +134,18 @@ exports.links = async (links) => {
 	const keyboard = [];
 	for (let link of links) {
 		keyboard.push([
-			Markup.urlButton(link["name"], `https://t.me/` + link["url"]),
+			Markup.urlButton(link["name"], link["url"]),
 		]);
 	}
 	return Markup.inlineKeyboard(keyboard);
 };
 
 exports.stream = Markup.inlineKeyboard([
-	[Markup.urlButton(`Genemator`, `http://twitch.com/genemators`)],
+	[Markup.urlButton(`Twitch`, `http://twitch.com/genemators`)],
 	[
 		Markup.urlButton(
-			`iBlogs`,
-			`https://www.youtube.com/channel/UCLvAJjc5gvy_6QL2f-RRBuw`
+			`YouTube`,
+			`https://www.youtube.com/channel/UCuF2yVTeVW6vcwXobvXXvZg`
 		),
 	],
 ]);
