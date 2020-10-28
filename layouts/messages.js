@@ -206,17 +206,6 @@ exports.minecraft = async (data) => {
 			return "";
 		}
 	};
-	const version = async () => {
-		if (
-			data["version"] !== "● Offline" ||
-			data["version"] !== "◌ Loading..." ||
-			data["version"] !== "◒ Waiting in queue"
-		) {
-			return `<b>Version: ${data["version"]}</b>` + `\n`;
-		} else {
-			return "";
-		}
-	};
 	const players = async () => {
 		if (data["players"]["online"] !== 0) {
 			return (
@@ -241,7 +230,7 @@ exports.minecraft = async (data) => {
 		`<b>Message:</b> ${data["motd"]["clean"][0]}` +
 		`\n` +
 		`${await players()}` +
-		`${await version()}` +
+		`<b>Version: ${data["version"]}</b>` + `\n` +
 		`${await software()}`
 	);
 };
