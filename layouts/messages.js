@@ -92,7 +92,7 @@ exports.check = async (github, telegram, server, website, uptime) =>
 exports.form_complete = `You have already responded to applicant!`;
 
 exports.form_guide =
-	`<b>In order to join our github organisation, choose and type as we showed in our examples below:</b>` +
+	`<b>In order to join my github organisation, choose and type as we showed in our examples below:</b>` +
 	`\n` +
 	`<code>/join &lt;github username&gt;</code>` +
 	`\n` +
@@ -109,7 +109,7 @@ exports.form_notification = (TG, ID) =>
 	`<b><a href="https://genemator.me">⛓ GitHub Update Notification ⛓</a></b>` +
 	`\n` +
 	`\n` +
-	`New applicant for Genestatics™ GitHub organization:` +
+	`New applicant for Chisel Devs™ GitHub organization:` +
 	`\n` +
 	`<code>Telegram ID:</code> <code>${TG}</code>` +
 	`\n` +
@@ -118,7 +118,7 @@ exports.form_notification = (TG, ID) =>
 	`\n` +
 	`<b>To proceed with it, copy and visit:</b>` +
 	`\n` +
-	`https://github.com/orgs/genestatic/people` +
+	`https://github.com/orgs/chiseldevs/people` +
 	`\n`;
 
 exports.form_status =
@@ -130,7 +130,7 @@ exports.form_accept = (data) =>
 	`<b>✨Congratulations✨</b>` +
 	`\n` +
 	`\n` +
-	`You have been invited to our organisation and from now so on, you are one of Genestatic™ members.` +
+	`You have been invited to our organisation and from now so on, you are one of Chisel Devs™ members.` +
 	` ` +
 	`In order to finish joining, please, open your mail and confirm our invitation that we sent to your github email!` +
 	`\n` +
