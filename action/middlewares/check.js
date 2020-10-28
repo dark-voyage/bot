@@ -25,14 +25,6 @@ composer.command(`check`, async (ctx) => {
 		}
 	};
 
-	const server = async () => {
-		if (await isReachable("genemator.me")) {
-			return "STABLE";
-		} else {
-			return "UNSTABLE";
-		}
-	};
-
 	const website = async () => {
 		if (await isReachable("genemator.me")) {
 			return "STABLE";
@@ -47,7 +39,6 @@ composer.command(`check`, async (ctx) => {
 			caption: await message.check(
 				await github(),
 				await telegram(),
-				await server(),
 				await website(),
 				uptime
 			),

@@ -74,13 +74,11 @@ exports.student_view = (data, match) =>
 	`\n` +
 	`<b>Experiences:</b> <code>${data["experience"].toString()}</code>`;
 
-exports.check = async (github, telegram, server, website, uptime) =>
+exports.check = async (github, telegram, website, uptime) =>
 	`<b>Genemator's Assistant™ Bot status health checker:</b>` +
 	`\n` +
 	`\n` +
 	`<b>Geno's Website:</b> <code>${website}</code>` +
-	`\n` +
-	`<b>Geno's API Server:</b> <code>${server}</code>` +
 	`\n` +
 	`<b>Github API:</b> <code>${github}</code>` +
 	`\n` +
