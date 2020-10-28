@@ -12,11 +12,27 @@ composer.on("inline_query", async ({ inlineQuery, answerInlineQuery }) => {
     indexation = 1,
     base = `https://github.com/genemators/`,
     thumb = `https://genemator.me/favicon.png`;
-  let repos = await Object.values(
+  let repos = []
+  await repos.push(Object.values(
     await ds("https://api.github.com/users/genemators/repos")
   ).map(function (obj) {
     return obj["name"];
-  });
+  }));
+  await repos.push(Object.values(
+      await ds("https://api.github.com/orgs/00010023/repos")
+  ).map(function (obj) {
+    return obj["name"];
+  }));
+  await repos.push(Object.values(
+      await ds("https://api.github.com/orgs/chiseldevs/repos")
+  ).map(function (obj) {
+    return obj["name"];
+  }));
+  await repos.push(Object.values(
+      await ds("https://api.github.com/orgs/4bis1/repos")
+  ).map(function (obj) {
+    return obj["name"];
+  }));
   let similarities = await fuzzy
     .filter(inlineQuery.query, repos)
     .sort()

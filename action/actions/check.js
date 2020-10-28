@@ -25,7 +25,7 @@ composer.action(`check`, async (ctx) => {
   };
 
   const server = async () => {
-    if (await isReachable("api.genemator.me")) {
+    if (await isReachable("genemator.me")) {
       return "STABLE";
     } else {
       return "UNSTABLE";

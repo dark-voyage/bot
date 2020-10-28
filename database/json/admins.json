@@ -8,7 +8,7 @@
     "telegram": "genemator",
     "github": "genemators",
     "experience": ["Javascript (EcmaScript 2019)", "Typescript", "Python 2", "Python 3", "Java", "Kotlin", "C++", "C", "Assembly"],
-    "avatar": "./bot/assets/genemator.jpg"
+    "avatar": "./assets/genemator.jpg"
   },
   "Mr.Abdurakhimov": {
     "name": "Mukhammadyusuf",
@@ -19,6 +19,6 @@
     "telegram": "iblogs_uz",
     "github": "MrAbdurakhimov",
     "experience": ["PHP", "JavaScript", "C++", "Python"],
-    "avatar": "./bot/assets/mrabdurakhimov.jpg"
+    "avatar": "./assets/mrabdurakhimov.jpg"
   }
 }

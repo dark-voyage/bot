@@ -21,25 +21,28 @@ composer.action(`admins`, async (ctx) => {
     }
   );
 });
+try {
+    composer.action(/admin_(.+)/gi, async (ctx) => {
+        const match = ctx.match[1];
+        const admins = database.admins;
+        const found = admins[match];
 
-composer.action(/admin_(.+)/gi, async (ctx) => {
-  const match = ctx.match[1];
-  const admins = database.admins;
-  const found = admins[match];
-
-  await ctx.editMessageMedia(
-    {
-      type: "photo",
-      caption: message.admin_view(found, match),
-      media: { source: found["avatar"] },
-    },
-    {
-      parse_mode: "HTML",
-      disable_web_page_preview: true,
-      reply_markup: keyboard.admin_view(found),
-    }
-  );
-});
+        await ctx.editMessageMedia(
+            {
+                type: "photo",
+                caption: message.admin_view(found, match),
+                media: { source: found["avatar"] },
+            },
+            {
+                parse_mode: "HTML",
+                disable_web_page_preview: true,
+                reply_markup: keyboard.admin_view(found),
+            }
+        );
+    });
+}catch (err) {
+    console.log(err)
+}
 
 middleware(composer);
 consoles.module(__filename);
