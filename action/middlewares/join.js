@@ -1,5 +1,6 @@
 const { composer, middleware } = require("../../core/bot");
 
+const gifs = require("../../database/db").gifs
 const consoles = require("../../layouts/consoles");
 const message = require("../../layouts/messages");
 const keyboard = require("../../layouts/keyboards");
@@ -25,7 +26,7 @@ composer.hears(/\/join (.+)/gi, async (ctx) => {
 
 composer.hears(/\/join/, async (ctx) => {
   await ctx.replyWithAnimation(
-    { url: `https://media.giphy.com/media/xT77Y4x27Rq3ZrrteM/source.gif` },
+    { url: gifs.join },
     {
       caption: message.form_guide,
       parse_mode: "HTML",

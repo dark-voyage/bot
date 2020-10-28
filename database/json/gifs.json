@@ -1,0 +1,20 @@
+{
+  "admin": "https://genemator.me/gifs/admin.gif",
+  "help": "https://genemator.me/gifs/help.gif",
+  "add": "https://genemator.me/gifs/add.gif",
+  "list": "https://genemator.me/gifs/list.gif",
+  "reset": "https://genemator.me/gifs/reset.gif",
+  "send": "https://genemator.me/gifs/send.gif",
+  "exclude": "https://genemator.me/gifs/exclude.gif",
+  "check": "https://genemator.me/gifs/check.gif",
+  "feedback": "https://genemator.me/gifs/feedback.gif",
+  "join": "https://genemator.me/gifs/join.gif",
+  "links": "https://genemator.me/gifs/links.gif",
+  "minecraft_w": "https://genemator.me/gifs/minecraft_w.gif",
+  "minecraft_r": "https://genemator.me/gifs/minecraft_r.gif",
+  "start": "https://genemator.me/gifs/start.gif",
+  "stats": "https://genemator.me/gifs/stats.gif",
+  "stream": "https://genemator.me/gifs/stream.gif",
+  "cm": "https://genemator.me/gifs/cm.gif",
+  "security": "https://genemator.me/gifs/security.gif"
+}

@@ -1,6 +1,7 @@
 const { composer, middleware } = require("../../core/bot");
 const isReachable = require("is-reachable");
 
+const gifs = require("../../database/db").gifs
 const consoles = require("../../layouts/consoles");
 const message = require("../../layouts/messages");
 const keyboard = require("../../layouts/keyboards");
@@ -41,7 +42,7 @@ composer.command(`check`, async (ctx) => {
   };
 
   await ctx.replyWithAnimation(
-    { url: `https://media.giphy.com/media/3o6UB9xT8upEDGrcqs/source.gif` },
+    { url: gifs.check },
     {
       caption: await message.check(
         await github(),

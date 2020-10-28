@@ -1,3 +1,4 @@
+const gifs = require("../../database/db").gifs
 const database = require("../../database/db");
 const message = require("../../layouts/messages");
 const keyboard = require("../../layouts/keyboards");
@@ -10,7 +11,7 @@ module.exports = async (ctx, func) => {
     await func();
   } else {
     await ctx.replyWithAnimation(
-      { url: `https://media.giphy.com/media/xT77XUjQrAVQmf4jFS/source.gif` },
+      { url: gifs.security },
       {
         parse_mode: "HTML",
         caption: message.error_admin,

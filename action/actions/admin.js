@@ -1,5 +1,6 @@
 const { composer, middleware } = require("../../core/bot");
 
+const gifs = require("../../database/db").gifs
 const consoles = require("../../layouts/consoles");
 const message = require("../../layouts/messages");
 const keyboard = require("../../layouts/keyboards");
@@ -11,7 +12,7 @@ composer.action(`admins`, async (ctx) => {
   await ctx.editMessageMedia(
     {
       type: "animation",
-      media: "https://media.giphy.com/media/xT77XUw1XMVGIxgove/source.gif",
+      media: gifs.admin,
       caption: message.admin_menu,
     },
     {

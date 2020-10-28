@@ -1,5 +1,6 @@
 const { composer, middleware } = require("../../core/bot");
 
+const gifs = require("../../database/db").gifs
 const consoles = require("../../layouts/consoles");
 const message = require("../../layouts/messages");
 const keyboard = require("../../layouts/keyboards");
@@ -9,7 +10,7 @@ composer.command(`links`, async (ctx) => {
   const links = database.links["links"];
 
   await ctx.replyWithAnimation(
-    { url: `https://media.giphy.com/media/3ohc1gFc7f8HbVXFKw/source.gif` },
+    { url: gifs.links },
     {
       caption: message.links,
       parse_mode: "HTML",
