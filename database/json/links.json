@@ -1,24 +1,24 @@
 {
-  "links": [
-    {
-      "name": "My Channel",
-      "url": "genemators"
-    },
-    {
-      "name": "Notifications",
-      "url": "genestatic"
-    },
-    {
-      "name": "Main Bot",
-      "url": "genemator_bot"
-    },
-    {
-      "name": "Testing Phase Bot",
-      "url": "beta_genemator_bot"
-    },
-    {
-      "name": "Chisel Devs",
-      "url": "iblogs_community"
-    }
-  ]
+	"links": [
+		{
+			"name": "My Channel",
+			"url": "genemators"
+		},
+		{
+			"name": "Notifications",
+			"url": "genestatic"
+		},
+		{
+			"name": "Main Bot",
+			"url": "genemator_bot"
+		},
+		{
+			"name": "Testing Phase Bot",
+			"url": "beta_genemator_bot"
+		},
+		{
+			"name": "Chisel Devs",
+			"url": "iblogs_community"
+		}
+	]
 }

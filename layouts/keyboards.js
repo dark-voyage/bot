@@ -1,151 +1,151 @@
 const { Markup } = require("telegraf");
 
 exports.start = Markup.inlineKeyboard([
-  [Markup.callbackButton("Show detailed information", "help")],
+	[Markup.callbackButton("Show detailed information", "help")],
 ]);
 
 exports.help = Markup.inlineKeyboard([
-  [Markup.switchToCurrentChatButton("Inline Mode (Beta)", "")],
+	[Markup.switchToCurrentChatButton("Inline Mode (Beta)", "")],
 ]);
 
 exports.admin_view = (data) =>
-  Markup.inlineKeyboard([
-    [Markup.urlButton(`Website`, data["profile"])],
-    [
-      Markup.urlButton(`Github`, `https://github.com/${data["github"]}`),
-      Markup.urlButton(`Telegram`, `https://t.me/${data["telegram"]}`),
-    ],
-    [Markup.callbackButton(`⬅ Back`, `admins`)],
-  ]);
+	Markup.inlineKeyboard([
+		[Markup.urlButton(`Website`, data["profile"])],
+		[
+			Markup.urlButton(`Github`, `https://github.com/${data["github"]}`),
+			Markup.urlButton(`Telegram`, `https://t.me/${data["telegram"]}`),
+		],
+		[Markup.callbackButton(`⬅ Back`, `admins`)],
+	]);
 
 exports.admin_list = async (data) => {
-  const list = [];
-  for (let admin of data) {
-    list.push([Markup.callbackButton(admin, `admin_${admin}`)]);
-  }
-  return Markup.inlineKeyboard(list);
+	const list = [];
+	for (let admin of data) {
+		list.push([Markup.callbackButton(admin, `admin_${admin}`)]);
+	}
+	return Markup.inlineKeyboard(list);
 };
 
 exports.check = Markup.inlineKeyboard([
-  Markup.callbackButton(`🔃 Refresh`, `check`),
+	Markup.callbackButton(`🔃 Refresh`, `check`),
 ]);
 
 exports.form_accept = Markup.inlineKeyboard([
-  [Markup.urlButton(`Community Channel`, `https://t.me/genemators`)],
+	[Markup.urlButton(`Community Channel`, `https://t.me/genemators`)],
 ]);
 
 exports.form_decline = Markup.inlineKeyboard([
-  [Markup.urlButton(`Feedback Zone`, `https://t.me/genestatic`)],
+	[Markup.urlButton(`Feedback Zone`, `https://t.me/genestatic`)],
 ]);
 
 exports.form_complete = Markup.inlineKeyboard([
-  [Markup.callbackButton(`Completed...`, `respond_complete`)],
-  [
-    Markup.urlButton(
-      `Check pending invitations`,
-      `https://github.com/orgs/genestatic/people/pending_invitations`
-    ),
-  ],
-  [
-    Markup.urlButton(
-      `Check pending collaborators`,
-      `https://github.com/orgs/genestatic/pending_collaborators`
-    ),
-  ],
+	[Markup.callbackButton(`Completed...`, `respond_complete`)],
+	[
+		Markup.urlButton(
+			`Check pending invitations`,
+			`https://github.com/orgs/genestatic/people/pending_invitations`
+		),
+	],
+	[
+		Markup.urlButton(
+			`Check pending collaborators`,
+			`https://github.com/orgs/genestatic/pending_collaborators`
+		),
+	],
 ]);
 
 exports.form_request = Markup.inlineKeyboard([
-  [
-    Markup.urlButton(
-      `Check pending invitations`,
-      `https://github.com/orgs/genestatic/people/pending_invitations`
-    ),
-  ],
-  [
-    Markup.urlButton(
-      `Check pending collaborators`,
-      `https://github.com/orgs/genestatic/pending_collaborators`
-    ),
-  ],
+	[
+		Markup.urlButton(
+			`Check pending invitations`,
+			`https://github.com/orgs/genestatic/people/pending_invitations`
+		),
+	],
+	[
+		Markup.urlButton(
+			`Check pending collaborators`,
+			`https://github.com/orgs/genestatic/pending_collaborators`
+		),
+	],
 ]);
 
 exports.form_admin = (data) =>
-  Markup.inlineKeyboard([
-    [
-      Markup.callbackButton(`✅`, `accept_form_${data}`),
-      Markup.callbackButton(`❌`, `decline_form_${data}`),
-    ],
-    [
-      Markup.urlButton(
-        `Check pending invitations`,
-        `https://github.com/orgs/genestatic/people/pending_invitations`
-      ),
-    ],
-    [
-      Markup.urlButton(
-        `Check pending collaborators`,
-        `https://github.com/orgs/genestatic/pending_collaborators`
-      ),
-    ],
-  ]);
+	Markup.inlineKeyboard([
+		[
+			Markup.callbackButton(`✅`, `accept_form_${data}`),
+			Markup.callbackButton(`❌`, `decline_form_${data}`),
+		],
+		[
+			Markup.urlButton(
+				`Check pending invitations`,
+				`https://github.com/orgs/genestatic/people/pending_invitations`
+			),
+		],
+		[
+			Markup.urlButton(
+				`Check pending collaborators`,
+				`https://github.com/orgs/genestatic/pending_collaborators`
+			),
+		],
+	]);
 
 exports.invalid = Markup.inlineKeyboard([
-  Markup.callbackButton(`Show available commands`, `help`),
+	Markup.callbackButton(`Show available commands`, `help`),
 ]);
 
 exports.photo = Markup.inlineKeyboard([
-  [Markup.urlButton(`Upload your own art!`, `https://t.me/genemator_bot`)],
-  [Markup.urlButton(`Community Channel`, `https://t.me/genemators`)],
+	[Markup.urlButton(`Upload your own art!`, `https://t.me/genemator_bot`)],
+	[Markup.urlButton(`Community Channel`, `https://t.me/genemators`)],
 ]);
 
 exports.video = Markup.inlineKeyboard([
-  [Markup.urlButton(`Upload your own video!`, `https://t.me/genemator_bot`)],
-  [Markup.urlButton(`Community Channel`, `https://t.me/genemators`)],
+	[Markup.urlButton(`Upload your own video!`, `https://t.me/genemator_bot`)],
+	[Markup.urlButton(`Community Channel`, `https://t.me/genemators`)],
 ]);
 
 exports.audio = Markup.inlineKeyboard([
-  [
-    Markup.urlButton(
-      `Upload your own music & audio!`,
-      `https://t.me/genemator_bot`
-    ),
-  ],
-  [Markup.urlButton(`Community Channel`, `https://t.me/genemators`)],
+	[
+		Markup.urlButton(
+			`Upload your own music & audio!`,
+			`https://t.me/genemator_bot`
+		),
+	],
+	[Markup.urlButton(`Community Channel`, `https://t.me/genemators`)],
 ]);
 
 exports.inline = (data) =>
-  Markup.inlineKeyboard(
-    [
-      Markup.urlButton(`GitHub`, `${data["html_url"]}`),
-      Markup.urlButton(
-        `Download`,
-        `https://github.com/${data["full_name"]}/archive/master.zip`
-      ),
-      Markup.switchToCurrentChatButton(`Repositories`, ``),
-    ],
-    { columns: 2 }
-  );
+	Markup.inlineKeyboard(
+		[
+			Markup.urlButton(`GitHub`, `${data["html_url"]}`),
+			Markup.urlButton(
+				`Download`,
+				`https://github.com/${data["full_name"]}/archive/master.zip`
+			),
+			Markup.switchToCurrentChatButton(`Repositories`, ``),
+		],
+		{ columns: 2 }
+	);
 
 exports.error_admin = Markup.inlineKeyboard([
-  Markup.urlButton(`Contact with admin`, `https://t.me/genemator`),
+	Markup.urlButton(`Contact with admin`, `https://t.me/genemator`),
 ]);
 
 exports.links = async (links) => {
-  const keyboard = [];
-  for (let link of links) {
-    keyboard.push([
-      Markup.urlButton(link["name"], `https://t.me/` + link["url"]),
-    ]);
-  }
-  return Markup.inlineKeyboard(keyboard);
+	const keyboard = [];
+	for (let link of links) {
+		keyboard.push([
+			Markup.urlButton(link["name"], `https://t.me/` + link["url"]),
+		]);
+	}
+	return Markup.inlineKeyboard(keyboard);
 };
 
 exports.stream = Markup.inlineKeyboard([
-  [Markup.urlButton(`Genemator`, `http://twitch.com/genemators`)],
-  [
-    Markup.urlButton(
-      `iBlogs`,
-      `https://www.youtube.com/channel/UCLvAJjc5gvy_6QL2f-RRBuw`
-    ),
-  ],
+	[Markup.urlButton(`Genemator`, `http://twitch.com/genemators`)],
+	[
+		Markup.urlButton(
+			`iBlogs`,
+			`https://www.youtube.com/channel/UCLvAJjc5gvy_6QL2f-RRBuw`
+		),
+	],
 ]);

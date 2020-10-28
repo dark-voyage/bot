@@ -1,24 +1,34 @@
 {
-  "Genemator": {
-    "name": "Sokhibjon",
-    "surname": "Orzikulov",
-    "status": "Main Dev",
-    "rank": "Senior Developer",
-    "profile": "https://genemator.me",
-    "telegram": "genemator",
-    "github": "genemators",
-    "experience": ["Javascript (EcmaScript 2019)", "Typescript", "Python 2", "Python 3", "Java", "Kotlin", "C++", "C", "Assembly"],
-    "avatar": "./assets/genemator.jpg"
-  },
-  "Mr.Abdurakhimov": {
-    "name": "Mukhammadyusuf",
-    "surname": "Abdurakhimov",
-    "status": "Active Shifter",
-    "rank": "Master Developer",
-    "profile": "https://bsba.uz/mrabdurakhimov/",
-    "telegram": "iblogs_uz",
-    "github": "MrAbdurakhimov",
-    "experience": ["PHP", "JavaScript", "C++", "Python"],
-    "avatar": "./assets/mrabdurakhimov.jpg"
-  }
+	"Genemator": {
+		"name": "Sokhibjon",
+		"surname": "Orzikulov",
+		"status": "Main Dev",
+		"rank": "Senior Developer",
+		"profile": "https://genemator.me",
+		"telegram": "genemator",
+		"github": "genemators",
+		"experience": [
+			"Javascript (EcmaScript 2019)",
+			"Typescript",
+			"Python 2",
+			"Python 3",
+			"Java",
+			"Kotlin",
+			"C++",
+			"C",
+			"Assembly"
+		],
+		"avatar": "./assets/genemator.jpg"
+	},
+	"Mr.Abdurakhimov": {
+		"name": "Mukhammadyusuf",
+		"surname": "Abdurakhimov",
+		"status": "Active Shifter",
+		"rank": "Master Developer",
+		"profile": "https://bsba.uz/mrabdurakhimov/",
+		"telegram": "iblogs_uz",
+		"github": "MrAbdurakhimov",
+		"experience": ["PHP", "JavaScript", "C++", "Python"],
+		"avatar": "./assets/mrabdurakhimov.jpg"
+	}
 }
