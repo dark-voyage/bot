@@ -194,7 +194,7 @@ exports.inline = (data) =>
 exports.minecraft = (data) =>
 	`<b>The status of our minecraft server:</b>` + `\n` +
 	`\n` +
-	`<b>Address:</b> ${data["hostname"]} / ${data.ip}:${data.port}` + `\n` +
+	`<b>Address:</b> mc.genemator.me / ${data.ip}:${data.port}` + `\n` +
 	`<b>Online:</b> ${data.online}` + `\n` +
 	`<b>Message:</b> ${data["motd"]["clean"][0]}` + `\n` +
 	`<b>Players: (${data["players"].online}/${data["players"].max})</b>` + `\n` +
