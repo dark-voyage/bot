@@ -247,6 +247,6 @@ exports.minecraft = async (data) => {
 
 exports.error_admin = `<b>You don't have enough power to do that!</b>`;
 
-exports.links = `<b>Here are groups & bots of Genemator:</b>`;
+exports.links = `<b>Here are social pages of Genemator:</b>`;
 
-exports.stream = `<b>Here you can get stream pages of our creators. Choose one of creators and press url buttons provided below:</b>`;
+exports.stream = `<b>Here you can get stream links of Genemator. Choose one of platforms and press url buttons provided below:</b>`;
