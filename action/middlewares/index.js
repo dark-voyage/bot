@@ -5,5 +5,6 @@ require("./check");
 require("./admin");
 require("./stats");
 require("./links");
-require("./feedback");
 require("./stream");
+require("./feedback");
+require("./minecraft");
