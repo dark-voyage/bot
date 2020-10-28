@@ -230,7 +230,8 @@ exports.minecraft = async (data) => {
 		`<b>Message:</b> ${data["motd"]["clean"][0]}` +
 		`\n` +
 		`${await players()}` +
-		`<b>Version: ${data["version"]}</b>` + `\n` +
+		`<b>Version: ${data["version"]}</b>` +
+		`\n` +
 		`${await software()}`
 	);
 };
