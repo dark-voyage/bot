@@ -203,23 +203,32 @@ exports.minecraft = async (data) => {
 		if (data["software"]) {
 			return `<b>Software:</b> ${data["software"]}` + `\n`;
 		} else {
-			return ("");
+			return "";
 		}
 	};
 	const version = async () => {
-		if (data["version"] !== "● Offline" || data["version" !== "◌ Loading..."]) {
+		if (
+			data["version"] !== "● Offline" ||
+			data["version" !== "◌ Loading..."]
+		) {
 			return `<b>Version: ${data["version"]}</b>` + `\n`;
 		} else {
-			return ("");
+			return "";
 		}
 	};
 	const players = async () => {
 		if (data["players"]["online"] !== 0) {
-			return `<b>Players:</b> <code>${data["players"]["list"].toString()}</code> <i>(${data["players"].online}/${data["players"].max})</i>` + `\n`
+			return (
+				`<b>Players:</b> <code>${data["players"][
+					"list"
+				].toString()}</code> <i>(${data["players"].online}/${
+					data["players"].max
+				})</i>` + `\n`
+			);
 		} else {
-			return `<b>Players:</b> no active players currently` + `\n`
+			return `<b>Players:</b> no active players currently` + `\n`;
 		}
-	}
+	};
 	return (
 		`<b>The status of our minecraft server:</b>` +
 		`\n` +
