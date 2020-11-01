@@ -57,7 +57,7 @@ exports.help =
 	`\n` +
 	`\n` +
 	`<i>In order to use our inline mode, switch to inline mode ` +
-	`by typing: @genemator_bot and then start typing something there.</i>`;
+	`by typing: @genemabot and then start typing something there.</i>`;
 
 exports.student_menu = `<b>Choose a student from the list to get information about:</b>`;
 

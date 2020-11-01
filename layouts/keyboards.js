@@ -35,7 +35,7 @@ exports.form_accept = Markup.inlineKeyboard([
 ]);
 
 exports.form_decline = Markup.inlineKeyboard([
-	[Markup.urlButton(`Feedback Zone`, `https://t.me/genemator_bot`)],
+	[Markup.urlButton(`Feedback Zone`, `https://t.me/genemabot`)],
 ]);
 
 exports.form_complete = Markup.inlineKeyboard([
@@ -94,12 +94,12 @@ exports.invalid = Markup.inlineKeyboard([
 ]);
 
 exports.photo = Markup.inlineKeyboard([
-	[Markup.urlButton(`Upload your own art!`, `https://t.me/genemator_bot`)],
+	[Markup.urlButton(`Upload your own art!`, `https://t.me/genemabot`)],
 	[Markup.urlButton(`Community Channel`, `https://t.me/genemators`)],
 ]);
 
 exports.video = Markup.inlineKeyboard([
-	[Markup.urlButton(`Upload your own video!`, `https://t.me/genemator_bot`)],
+	[Markup.urlButton(`Upload your own video!`, `https://t.me/genemabot`)],
 	[Markup.urlButton(`Community Channel`, `https://t.me/genemators`)],
 ]);
 
@@ -107,7 +107,7 @@ exports.audio = Markup.inlineKeyboard([
 	[
 		Markup.urlButton(
 			`Upload your own music & audio!`,
-			`https://t.me/genemator_bot`
+			`https://t.me/genemabot`
 		),
 	],
 	[Markup.urlButton(`Community Channel`, `https://t.me/genemators`)],

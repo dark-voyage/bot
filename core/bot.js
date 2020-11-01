@@ -33,7 +33,7 @@ if (env.ENVIRONMENT === "heroku") {
 					`\n` +
 					`<b>For more information, visit:</b>` +
 					`\n` +
-					`<a href="https://t.me/genemator_bot"><u>https://t.me/genemator_bot</u></a>`,
+					`<a href="https://t.me/genemabot"><u>https://t.me/genemabot</u></a>`,
 				{
 					parse_mode: "HTML",
 					disable_notification: true,
