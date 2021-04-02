@@ -26,7 +26,7 @@ composer.command(`check`, async (ctx) => {
 	};
 
 	const website = async () => {
-		if (await isReachable("genemator.me")) {
+		if (await isReachable("genemator.uz")) {
 			return "STABLE";
 		} else {
 			return "UNSTABLE";

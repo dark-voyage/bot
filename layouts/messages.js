@@ -104,7 +104,7 @@ exports.form_guide =
 	`<code>/join example@gmail.com</code>`;
 
 exports.form_notification = (TG, ID) =>
-	`<b><a href="https://genemator.me">⛓ GitHub Update Notification ⛓</a></b>` +
+	`<b><a href="https://genemator.uz">⛓ GitHub Update Notification ⛓</a></b>` +
 	`\n` +
 	`\n` +
 	`New applicant for Chisel Devs™ GitHub organization:` +
@@ -223,7 +223,7 @@ exports.minecraft = async (data) => {
 		`<b>The status of our minecraft server:</b>` +
 		`\n` +
 		`\n` +
-		`<b>Address:</b> mc.genemator.me` +
+		`<b>Address:</b> mc.genemator.uz` +
 		`\n` +
 		`<b>Server:</b> ${await online()}` +
 		`\n` +

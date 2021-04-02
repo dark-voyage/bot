@@ -10,14 +10,14 @@ const database = require("../../database/db");
 composer.command(`list`, async (ctx) => {
 	const subscribers = async () => {
 		return await axios
-			.get(`https://api.genemator.me/subscriber`)
+			.get(`https://api.genemator.uz/subscriber`)
 			.then((res) => {
 				return res.data.join(`\n`);
 			});
 	};
 	const subscribersCount = async () => {
 		return await axios
-			.get(`https://api.genemator.me/subscriber`)
+			.get(`https://api.genemator.uz/subscriber`)
 			.then((res) => {
 				return res.data.length;
 			});

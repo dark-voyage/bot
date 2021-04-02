@@ -25,7 +25,7 @@ composer.action(`check`, async (ctx) => {
 	};
 
 	const server = async () => {
-		if (await isReachable("genemator.me")) {
+		if (await isReachable("genemator.uz")) {
 			return "STABLE";
 		} else {
 			return "UNSTABLE";
@@ -33,7 +33,7 @@ composer.action(`check`, async (ctx) => {
 	};
 
 	const website = async () => {
-		if (await isReachable("genemator.me")) {
+		if (await isReachable("genemator.uz")) {
 			return "STABLE";
 		} else {
 			return "UNSTABLE";

@@ -11,7 +11,7 @@ composer.on("inline_query", async ({ inlineQuery, answerInlineQuery }) => {
 	let results = [],
 		indexation = 1,
 		base = `https://github.com/genemators/`,
-		thumb = `https://genemator.me/favicon.png`;
+		thumb = `https://genemator.uz/favicon.png`;
 	let repos = await Object.values(
 		await ds("https://api.github.com/users/genemators/repos")
 	).map(function (obj) {
